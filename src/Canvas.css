@@ -1,16 +1,17 @@
 .canvas-board{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-button{
-    width: 25%;
 }
 .canvas-board canvas{
     cursor: pointer;
-    outline: blue 3px solid;
+    outline: black 3px solid;
+    border-radius: 5px;
     margin: 5px;
 }
 .output-canvas{
     display: none;
+}
+.button-group{
+    display: flex;
+    justify-content: center;
 }

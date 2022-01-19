@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
-export default function Question(){
+var answer = "";
+export function Question(props){
     const [randomNumA, setRandomNumberA] = useState(0);
     const [randomNumB, setRandomNumberB] = useState(0);
 
@@ -11,16 +11,20 @@ export default function Question(){
 
     let randomNumC = Math.abs(randomNumA-randomNumB);
     let expression = "";
-    let answer = "";
     if(randomNumA > randomNumB)
     {
-        answer = randomNumC.toString();
+        answer = randomNumC;
         expression = randomNumA.toString() + ' - ' + randomNumB.toString();
     }
     else
     {
-        answer = randomNumB.toString();
+        answer = randomNumB;
         expression = randomNumC.toString() + ' + ' + randomNumA.toString();
     }
-    return (<p>{expression + ' = ' + answer}</p>);
+    return (
+        <p className="display-4 m-3">
+            {props.getAnswer(answer)}
+            What is {' '+expression + ' = ?'}
+        </p>
+    );
 }
