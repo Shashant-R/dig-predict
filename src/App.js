@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Canvas from './Canvas';
+import * as tf from '@tensorflow/tfjs';
 import './App.css';
+import Question from './Question';
 
 function App() {
+  const [model, setModel] = useState(null);
+  async function initializeModel(){
+    const loadedModel = await tf.loadLayersModel('https://jarbun.github.io/digit-recognition/model/model.json');
+    setModel(loadedModel);
+  }
+  
+  useEffect(()=>{
+    initializeModel();
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Question/>
+      <Canvas model={model}/>
+      <Canvas model={model}/>
     </div>
   );
+  
 }
 
 export default App;
