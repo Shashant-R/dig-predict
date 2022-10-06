@@ -14,7 +14,7 @@ function App() {
   const check = useRef(null);
 
   async function initializeModel(){
-    const loadedModel = await tf.loadLayersModel('https://jarbun.github.io/digit-recognition/model/model.json');
+    const loadedModel = await tf.loadLayersModel('https://github.com/Shashant-R/dig-predict/blob/master/src/model.json');
     setModel(loadedModel);
   }
   const predictAnswer = (inputValue) => {
