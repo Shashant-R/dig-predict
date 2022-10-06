@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dig-predict/static/css/main.635af7a5.css",
-    "main.js": "/dig-predict/static/js/main.6f4f5dcd.js",
+    "main.js": "/dig-predict/static/js/main.8f81f18d.js",
     "static/js/787.8384c411.chunk.js": "/dig-predict/static/js/787.8384c411.chunk.js",
     "index.html": "/dig-predict/index.html",
     "main.635af7a5.css.map": "/dig-predict/static/css/main.635af7a5.css.map",
-    "main.6f4f5dcd.js.map": "/dig-predict/static/js/main.6f4f5dcd.js.map",
+    "main.8f81f18d.js.map": "/dig-predict/static/js/main.8f81f18d.js.map",
     "787.8384c411.chunk.js.map": "/dig-predict/static/js/787.8384c411.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.635af7a5.css",
-    "static/js/main.6f4f5dcd.js"
+    "static/js/main.8f81f18d.js"
   ]
 }
