@@ -14,7 +14,7 @@ function App() {
   const check = useRef(null);
 
   async function initializeModel(){
-    const modelPath='./dig-predict/model/model.json';
+    const modelPath='./dig-predict/model/model.json'; //remove 'dig-predict' while building
     const loadedModel = await tf.loadLayersModel(modelPath);
     setModel(loadedModel);
   }
