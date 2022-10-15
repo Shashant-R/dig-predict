@@ -14,7 +14,8 @@ function App() {
   const check = useRef(null);
 
   async function initializeModel(){
-    const loadedModel = await tf.loadLayersModel('https://github.com/Shashant-R/dig-predict/blob/master/src/model.json');
+    const modelPath='./dig-predict/model/model.json';
+    const loadedModel = await tf.loadLayersModel(modelPath);
     setModel(loadedModel);
   }
   const predictAnswer = (inputValue) => {
@@ -59,7 +60,7 @@ function App() {
           <div className='verdict'>
             {(win)? (
               <p className='display-5 m-1'> You got it right!</p>
-            ) : (<p className='display-5 m-1'> Try again</p>)}
+            ) : (<p className='display-5 m-1' onClick={() => window.location.reload(false)}> Try again</p>)}
             <p className='display-7 mt-4'>You Entered = {inputAnswer}</p>
             <p className='display-7 md-1'>Correct Answer = {actualAnswer}</p>
           </div>
